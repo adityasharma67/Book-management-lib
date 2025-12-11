@@ -14,11 +14,14 @@ public class App {
     }
 
     public static void main(String[] args) {
-        books.add("The Alchemist");
-        books.add("Atomic Habits");
-        books.add("The Hobbit");
+        addBook("The Alchemist");
+        addBook("Atomic Habits");
+        addBook("The Hobbit");
 
         System.out.println("📚 Books in Library:");
         books.forEach(System.out::println);
+
+        System.out.println("Found 'The Hobbit'? " + searchBook("The Hobbit"));
+        System.out.println("Found 'Nonexistent'? " + searchBook("Nonexistent Book"));
     }
 }
